@@ -1,0 +1,15 @@
+import Item from "./item";
+
+function Fooditems({ items }) {
+  return (
+    <ul className="list-group">
+      {
+        items.map((item) => (
+          <Item key={item} HealthyFood={item} />
+        ))
+      }
+    </ul>
+  );
+}
+
+export default Fooditems;
