@@ -1,5 +1,5 @@
 function FoodList(){
-    let FoodList = ['Dal','Green Vegetables', 'Roti','Salad','Milk']
+    let FoodList = ['Dal','Green Vegetables', 'Roti','Salad','Milk', 'BlueBerry']
     return(
         <>
             <h3>Healthy Food List:</h3>
