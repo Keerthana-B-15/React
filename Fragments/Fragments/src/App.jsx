@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
+import Fooditems from './Components/Fooditems';
+import ErrorMessgage from './Components/Errormsg';
 
 function App() {
 
@@ -20,10 +22,12 @@ function App() {
       <h1>Healthy Food List: </h1>
       {/* 3. EmptyMessgage*/}
       {/*Logical operator */}
-      {FoodItems.length === 0 && <h3>I'm still hungry.</h3>}
-      <ul className="list-group">
+      {/*FoodItems.length === 0 && <h3>I'm still hungry.</h3>*/}
+      {/*<ul className="list-group">
         {FoodItems.map((item, index)=> <li className="list-group-item" key={index}>{item}</li> )}
-      </ul>
+      </ul>*/}
+      <ErrorMessgage Foodlist= {FoodItems}/>
+      <Fooditems Foodlist= {FoodItems}/>
     </>
   );
 }
