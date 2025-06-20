@@ -1,7 +1,9 @@
+import styles from "./Items.module.css"
+
 function Item({FoodItem}){
     return(
         <>
-            <li className='list-group-item'>{FoodItem}</li>
+            <li className={` ${styles['k-item']} list-group-item`}> <span className={styles['k-span']}>{FoodItem}</span></li>
         </>
     )
 }

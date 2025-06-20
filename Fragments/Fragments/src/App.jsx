@@ -19,7 +19,7 @@ function App() {
   
   return (
     <>
-      <h1>Healthy Food List: </h1>
+      <h1 className="food-heading">Healthy Food List: </h1>
       {/* 3. EmptyMessgage*/}
       {/*Logical operator */}
       {/*FoodItems.length === 0 && <h3>I'm still hungry.</h3>*/}
