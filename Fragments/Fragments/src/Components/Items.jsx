@@ -1,4 +1,5 @@
 import styles from "./Items.module.css"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Item({FoodItem}){
     return(
