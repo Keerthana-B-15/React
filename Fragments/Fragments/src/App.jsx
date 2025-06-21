@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Fooditems from './Components/Fooditems';
 import ErrorMessgage from './Components/Errormsg';
 import Container from './Components/Container';
+import FoodInput from './Components/FoodInput';
 
 function App() {
 
@@ -32,12 +33,13 @@ function App() {
         </ul>*/}
 
         <ErrorMessgage Foodlist={FoodItems} />
+        <FoodInput />
         <Fooditems Foodlist={FoodItems} />
       </Container>
 
-      <Container>
+      {/*<Container>
         <p>Above is the list of healthy foods that are good for your health and well being</p>
-      </Container>
+      </Container>*/}
     </>
   );
 }
