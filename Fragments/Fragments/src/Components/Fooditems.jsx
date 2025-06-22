@@ -4,7 +4,8 @@ function Fooditems({Foodlist}) {
   return (
     <>
       <ul className='list-group' >
-        {Foodlist.map((item, index) => <Item FoodItem={item} key={index}/> )}
+        {Foodlist.map((item, index) => 
+        <Item FoodItem={item} key={index}  handleAddToCartBtn={()=> alert(` ${item} Added To Cart`)}/> )}
       </ul>
     </>
   );

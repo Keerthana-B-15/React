@@ -8,8 +8,14 @@ import FoodInput from './Components/FoodInput';
 
 function App() {
 
-  let FoodItems = ['Dal', 'Green Vegetables', 'Roti', 'Salad', 'Milk']
+  let FoodItems = ['Dal', 'Green Vegetables', 'Roti', 'Salad', 'Milk'];
 
+  let textToShow = "Food Items Entered By User";
+
+  const HandleOnChange = (event) => {
+    console.log(event.target.value)
+    textToShow = event.target.value
+  }
   /*  1. if-else Condition
   if(FoodItems.length === 0){
     return <h3>I'm still Hungry.</h3>;
@@ -33,7 +39,8 @@ function App() {
         </ul>*/}
 
         <ErrorMessgage Foodlist={FoodItems} />
-        <FoodInput />
+        <FoodInput HandleOnChange={HandleOnChange}/>
+        <p>{textToShow}</p>
         <Fooditems Foodlist={FoodItems} />
       </Container>
 
@@ -44,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

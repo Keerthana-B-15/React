@@ -1,9 +1,10 @@
 import styles from './FoodInput.module.css'
 
-function FoodInput(){
-const HandleOnChange = (event) => {
+function FoodInput({HandleOnChange}){
+/*
+    const HandleOnChange = (event) => {
     console.log(event.target.value)
-}
+}*/
 
     return (
         <>
