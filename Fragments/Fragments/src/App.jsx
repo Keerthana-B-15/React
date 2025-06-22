@@ -5,16 +5,32 @@ import Fooditems from './Components/Fooditems';
 import ErrorMessgage from './Components/Errormsg';
 import Container from './Components/Container';
 import FoodInput from './Components/FoodInput';
+import { useState } from 'react';
 
 function App() {
 
-  let FoodItems = ['Dal', 'Green Vegetables', 'Roti', 'Salad', 'Milk'];
 
-  let textToShow = "Food Items Entered By User";
 
-  const HandleOnChange = (event) => {
-    console.log(event.target.value)
-    textToShow = event.target.value
+  //let FoodItems = ['Dal', 'Green Vegetables', 'Roti', 'Salad', 'Milk'];
+
+
+  /*let textStateArr = useState("Food Items Entered By User");
+
+  let textToShow = textStateArr[0];
+  let setTextState = textStateArr[1];*/
+
+  let [FoodItems, setFoodItems] =useState([]);
+
+
+
+  const HandleOnKeyDown = (event) => {
+    if(event.key === 'Enter') {
+      let newFoodItem = event.target.value;
+      event.target.value = '';
+      let newItems = [...FoodItems, newFoodItem];
+      setFoodItems(newItems);
+      console.log(`New Food item added is ${newFoodItem}`);
+    }
   }
   /*  1. if-else Condition
   if(FoodItems.length === 0){
@@ -38,9 +54,9 @@ function App() {
           {FoodItems.map((item, index)=> <li className="list-group-item" key={index}>{item}</li> )}
         </ul>*/}
 
+        <FoodInput HandleOnKeyDown={HandleOnKeyDown}/>
         <ErrorMessgage Foodlist={FoodItems} />
-        <FoodInput HandleOnChange={HandleOnChange}/>
-        <p>{textToShow}</p>
+        {/*<p>{textToShow}</p>*/}
         <Fooditems Foodlist={FoodItems} />
       </Container>
 
