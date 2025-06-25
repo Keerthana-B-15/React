@@ -6,6 +6,7 @@ import Card from './components/Card'
 import Product from './components/Product'
 import ClickCounter from './components/ClickCounter'
 import RemoveItem from './components/RemoveItem'
+import ItemLikeCounter from './components/ItemLikeCounter'
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
         <p>Only ₹49 today!</p>
         <Product title="🥗 Fresh Salad"/>
         <ClickCounter count={count} HandleOnClick={HandleOnClick} />
-        <RemoveItem onRemove ={handleRemoveItem} />  
+        <RemoveItem onRemove ={handleRemoveItem} />
+        <ItemLikeCounter title="🥗 Fresh Salad"/> 
       </Card>
 
       <Card>
@@ -33,7 +35,8 @@ function App() {
         <p>Special offer: ₹30</p>
         <Product title="🥤 Detox Juice"/>
         <ClickCounter count={count} HandleOnClick={HandleOnClick} />
-        <RemoveItem onRemove={handleRemoveItem} />  
+        <RemoveItem onRemove={handleRemoveItem} />
+        <ItemLikeCounter title="🥤 Detox Juice"/>   
       </Card>
 
     </>
