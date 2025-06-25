@@ -5,6 +5,7 @@ import './App.css'
 import Card from './components/Card'
 import Product from './components/Product'
 import ClickCounter from './components/ClickCounter'
+import RemoveItem from './components/RemoveItem'
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
     setCount(count +1);
   }
 
+  const handleRemoveItem = ()  => alert("Item Removed!");
+
 
   return (
     <>
@@ -22,6 +25,7 @@ function App() {
         <p>Only ₹49 today!</p>
         <Product title="🥗 Fresh Salad"/>
         <ClickCounter count={count} HandleOnClick={HandleOnClick} />
+        <RemoveItem onRemove ={handleRemoveItem} />  
       </Card>
 
       <Card>
@@ -29,6 +33,7 @@ function App() {
         <p>Special offer: ₹30</p>
         <Product title="🥤 Detox Juice"/>
         <ClickCounter count={count} HandleOnClick={HandleOnClick} />
+        <RemoveItem onRemove={handleRemoveItem} />  
       </Card>
 
     </>
